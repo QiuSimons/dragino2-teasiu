@@ -1,3 +1,33 @@
+Package: badblocks
+Version: 1.44.5-2
+Depends: libc, e2fsprogs
+Source: feeds/base/package/utils/e2fsprogs
+SourceName: badblocks
+License: GPL-2.0
+LicenseFiles: NOTICE
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 7915
+Filename: badblocks_1.44.5-2_mips_24kc.ipk
+Size: 8650
+SHA256sum: 711124cb535562cc3225d5e3a063c5e02121e4af26d5a04571e6ba156e2fed3c
+Description:  Ext2 Filesystem badblocks utility
+
+Package: block-mount
+Version: 2020-05-12-84269037-1
+Depends: libc, ubox, libubox20191228, libuci20130104, libblobmsg-json, libjson-c2
+Source: package/system/fstools
+SourceName: block-mount
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 22396
+Filename: block-mount_2020-05-12-84269037-1_mips_24kc.ipk
+Size: 22970
+SHA256sum: 9ac2d985a5670521eb6ca2c02a3b5e1689c4684a40e4b14d7ba8ea651f7a9244
+Description:  Block device mounting and checking
+
 Package: luci-app-vlmcsd
 Version: 1.0-5
 Depends: libc, vlmcsd
