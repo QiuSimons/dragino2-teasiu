@@ -1,0 +1,37 @@
+
+config system
+	option hostname 'Router'
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+	option zonename 'Asia/Shanghai'
+	option cronloglevel '5'
+	option log_proto 'udp'
+	option conloglevel '8'
+	option timezone 'CST-8'
+
+config timeserver 'ntp'
+	list server '0.openwrt.pool.ntp.org'
+	list server '1.openwrt.pool.ntp.org'
+	list server '2.openwrt.pool.ntp.org'
+	list server '3.openwrt.pool.ntp.org'
+
+config led 'led_wlan'
+	option name 'WLAN'
+	option sysfs 'dragino2:red:wlan'
+	option trigger 'phy0tpt'
+
+config led 'led_lan'
+	option name 'LAN'
+	option sysfs 'dragino2:red:lan'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'eth0'
+
+config led 'led_wan'
+	option name 'WAN'
+	option sysfs 'dragino2:red:wan'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'eth1'
+

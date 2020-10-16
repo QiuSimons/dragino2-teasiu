@@ -1,0 +1,66 @@
+Package: luci-app-vlmcsd
+Version: 1.0-5
+Depends: libc, vlmcsd
+Section: luci
+Architecture: all
+Installed-Size: 7027
+Filename: luci-app-vlmcsd_1.0-5_all.ipk
+Size: 7861
+SHA256sum: aa6e7b8c3e5477ae8d5f6dfc372833dbb1658a6b3f2bc20bd33f02c9e4052b60
+Description:  LuCI page for KMS
+
+Package: luci-i18n-vlmcsd-zh-cn
+Version: 1.0-5
+Depends: libc, luci-app-vlmcsd
+Section: luci
+Architecture: all
+Installed-Size: 9860
+Filename: luci-i18n-vlmcsd-zh-cn_1.0-5_all.ipk
+Size: 10673
+SHA256sum: 5a18d7e322e1d1543c2a43e13ab649b824c1f7eff9234925cd46e1b843d774d1
+Description:  Translation for luci-app-vlmcsd - 中文 (Chinese)
+
+Package: luci-app-admconf
+Version: git-20.287.36806-06e9ee4-1
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 2491
+Filename: luci-app-admconf_git-20.287.36806-06e9ee4-1_all.ipk
+Size: 3187
+SHA256sum: 2f6dbe5ff5a6791311aeb2fe197d49541e4bb1ca45c04984acee9e74bc18016e
+Description:  LuCI Support for ADMINCONFedit
+
+Package: luci-app-ramfree
+Version: 1.0-1
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 420
+Filename: luci-app-ramfree_1.0-1_all.ipk
+Size: 1054
+SHA256sum: e3a87cc8f56912760570a9505c90c95dc417ca431e4c0da12109ab2356e0ebe6
+Description:  luci-app-ramfree
+
+Package: vlmcsd
+Version: svn1113-1
+Depends: libc, libpthread
+License: MIT
+Section: net
+Architecture: mips_24kc
+Installed-Size: 22190
+Filename: vlmcsd_svn1113-1_mips_24kc.ipk
+Size: 22823
+SHA256sum: 48f882bb04dfb110c205ed20a325a5360ffbd272d14e232a1c686e1cbeaf2a48
+Description:  vlmcsd is a KMS Emulator in C.
+
+Package: luci-i18n-ramfree-zh-cn
+Version: 1.0-1
+Depends: libc, luci-app-ramfree
+Section: luci
+Architecture: all
+Installed-Size: 403
+Filename: luci-i18n-ramfree-zh-cn_1.0-1_all.ipk
+Size: 1185
+SHA256sum: a4f01697d5d5c3027c6b8dacb94094b27137b9ac3a6deaa1341ba97275dc2134
+Description:  Translation for luci-app-ramfree - 中文 (Chinese)
