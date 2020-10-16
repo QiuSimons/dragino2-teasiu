@@ -11,3 +11,5 @@ git clone -b v19.07.4 https://github.com/teasiu/dragino2.git
 然后
 cd dragino2
 sh make.sh
+############################
+使用ubuntu20.04
