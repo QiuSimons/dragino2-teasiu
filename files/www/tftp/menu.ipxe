@@ -130,25 +130,25 @@ chain memdisk iso raw || goto failed
 goto start
 
 :win8pe
-set base-url nfs://192.168.1.1/mnt/sda3/ipxenetboot
+set base-url nfs://192.168.1.1/mnt/sda1/ipxenetboot
 initrd ${base-url}/win8pe.iso
 chain memdisk iso raw || goto failed
 goto start
 
 :win10pe
-set base-url nfs://192.168.1.1/mnt/sda3/ipxenetboot
+set base-url nfs://192.168.1.1/mnt/sda1/ipxenetboot
 initrd ${base-url}/win10pe.iso
 chain memdisk iso raw || goto failed
 goto start
 
 :slitaz4
-initrd nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4.iso || goto failed
+initrd nfs://192.168.1.1/mnt/sda1/ipxenetboot/slitaz4.iso || goto failed
 chain memdisk iso raw || goto failed
 goto start
 
 :slitaz
-kernel nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4/bzImage
-initrd nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4/rootfs.gz rw root=/dev/null vga=normal autologin
+kernel nfs://192.168.1.1/mnt/sda1/ipxenetboot/slitaz4/bzImage
+initrd nfs://192.168.1.1/mnt/sda1/ipxenetboot/slitaz4/rootfs.gz rw root=/dev/null vga=normal autologin
 
 ############################ INSTALLER MENU #########################
 
