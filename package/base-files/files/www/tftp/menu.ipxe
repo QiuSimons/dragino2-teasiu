@@ -84,7 +84,7 @@ goto start
 :ubuntulive
 echo Booting ubuntu20.04 live
 set server_ip 192.168.1.1
-set nfs_path /mnt/sda3/ipxenetboot/ubuntu
+set nfs_path /mnt/sda1/ipxenetboot/ubuntu
 kernel nfs://${server_ip}${nfs_path}/casper/vmlinuz || read void
 initrd nfs://${server_ip}${nfs_path}/casper/initrd || read void
 imgargs vmlinuz initrd=initrd root=/dev/nfs boot=casper netboot=nfs nfsroot=${server_ip}:${nfs_path} ip=dhcp locale=zh_CN splash quiet -- || read void
