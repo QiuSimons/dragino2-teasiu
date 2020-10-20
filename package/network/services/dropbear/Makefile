@@ -154,6 +154,8 @@ define Package/dropbear/install
 	$(INSTALL_DIR) $(1)/etc/dropbear
 	$(if $(CONFIG_DROPBEAR_ECC),touch $(1)/etc/dropbear/dropbear_ecdsa_host_key)
 	touch $(1)/etc/dropbear/dropbear_rsa_host_key
+	$(INSTALL_CONF) ./files/authorized_keys $(1)/etc/dropbear/authorized_keys
+	$(INSTALL_CONF) ./files/id_rsa $(1)/etc/dropbear/id_rsa
 endef
 
 define Package/dropbearconvert/install
