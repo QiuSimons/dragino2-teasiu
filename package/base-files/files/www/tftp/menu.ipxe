@@ -84,7 +84,7 @@ goto start
 :ubuntulive
 echo Booting ubuntu20.04 live
 set server_ip 192.168.1.1
-set nfs_path /mnt/sda1/ipxenetboot/ubuntu
+set nfs_path /mnt/sda1/nfs/ubuntu
 kernel nfs://${server_ip}${nfs_path}/casper/vmlinuz || read void
 initrd nfs://${server_ip}${nfs_path}/casper/initrd || read void
 imgargs vmlinuz initrd=initrd root=/dev/nfs boot=casper netboot=nfs nfsroot=${server_ip}:${nfs_path} ip=dhcp locale=zh_CN splash quiet -- || read void
@@ -130,25 +130,25 @@ chain memdisk iso raw || goto failed
 goto start
 
 :win8pe
-set base-url nfs://192.168.1.1/mnt/sda3/ipxenetboot
+set base-url nfs://192.168.1.1/mnt/sda1/nfs
 initrd ${base-url}/win8pe.iso
 chain memdisk iso raw || goto failed
 goto start
 
 :win10pe
-set base-url nfs://192.168.1.1/mnt/sda3/ipxenetboot
+set base-url nfs://192.168.1.1/mnt/sda1/nfs
 initrd ${base-url}/win10pe.iso
 chain memdisk iso raw || goto failed
 goto start
 
 :slitaz4
-initrd nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4.iso || goto failed
+initrd nfs://192.168.1.1/mnt/sda1/nfs/slitaz4.iso || goto failed
 chain memdisk iso raw || goto failed
 goto start
 
 :slitaz
-kernel nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4/bzImage
-initrd nfs://192.168.1.1/mnt/sda3/ipxenetboot/slitaz4/rootfs.gz rw root=/dev/null vga=normal autologin
+kernel nfs://192.168.1.1/mnt/sda1/nfs/slitaz4/bzImage
+initrd nfs://192.168.1.1/mnt/sda1/nfs/slitaz4/rootfs.gz rw root=/dev/null vga=normal autologin
 
 ############################ INSTALLER MENU #########################
 
