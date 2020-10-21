@@ -1,11 +1,10 @@
 [global]
 	netbios name = |NAME| 
 	display charset = |CHARSET|
-	interfaces = |INTERFACES|
 	server string = |DESCRIPTION|
 	unix charset = |CHARSET|
 	workgroup = |WORKGROUP|
-	bind interfaces only = yes
+	bind interfaces only = no
 	deadtime = 30
 	enable core files = no
 	invalid users = root
@@ -18,3 +17,6 @@
 	security = user
 	smb passwd file = /etc/samba/smbpasswd
 	use sendfile = yes
+	os level = 99
+	preferred master = yes
+	wins support = yes
