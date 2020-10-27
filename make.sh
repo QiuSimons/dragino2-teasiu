@@ -1,0 +1,2 @@
+#!/bin/bash
+make image PROFILE=DRAGINO2 PACKAGES="badblocks base-files blkid block-mount e2fsprogs kmod-nls-cp437 kmod-nls-iso8859-1 kmod-nls-utf8 kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb-storage-extras kmod-usb-uhci kmod-usb2 luci luci-app-admconf luci-i18n-base-zh-cn luci-i18n-samba-zh-cn luci-i18n-upnp-zh-cn luci-i18n-wol-zh-cn usbutils luci-i18n-ramfree-zh-cn nfs-kernel-server vsftpd wget fdisk tar curl luci-i18n-nfs-zh-cn bind-client openssl-util" FILES=files/
