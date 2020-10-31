@@ -251,9 +251,8 @@ choice
 	config LIBC_USE_UCLIBC
 		select USE_UCLIBC
 		bool "Use uClibc-ng"
-		depends on !(aarch64 || aarch64_be || powerpc64 || mips || mips64 || mipsel || mips64el)
-		depends on BROKEN || !(arm || armeb || i386 || x86_64 || powerpc)
-
+		depends on !arc
+		
 	config LIBC_USE_MUSL
 		select USE_MUSL
 		bool "Use musl"

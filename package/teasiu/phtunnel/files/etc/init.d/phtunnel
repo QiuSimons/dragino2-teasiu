@@ -46,7 +46,7 @@ start_service()
 	cmd="phtunnel -c $config_file  -l $log_path --rpc -p $pid_file"
 	[ -n "$app_id" -a -n "$app_key" ] && cmd="$cmd --appid "$app_id" --appkey $app_key"
 	[ -n "$server_addr" ] && cmd="$cmd  -s $server_addr" 
-	[ -n "$dev_info" ] && cmd="$cmd --deviceinfo 'mem:32; usb:on; cpu:mipsel'"
+	[ -n "$dev_info" ] && cmd="$cmd --deviceinfo 'mem:32; usb:on; cpu:mips'"
 	#echo $cmd
 	
 	procd_open_instance
