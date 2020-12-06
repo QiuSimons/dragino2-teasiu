@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: openwrt-19.07.4
 
       - name: Space cleanup
         env:
